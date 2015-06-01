@@ -1,0 +1,39 @@
+
+<div class="Category">
+  <!--<span class='Menu'>Menu</span>-->
+
+<div class='selectType'>
+	<label  ng-class = "{active:panel.isSetType(0)}" ng-click='panel.setType(0)'>All</label>
+	<label ng-class = "{active:panel.isSetType(1)}" ng-click='panel.setType(1)'>Veg</label>
+	<label ng-class = "{active:panel.isSetType(2)}" ng-click='panel.setType(2)'>Non-Veg</label>
+	<label  class="selectplace">{{panel.getPlace()}}</label>
+</div>
+
+</div>
+
+<div class="itemCatlog" ng-controller="ItemCatlogController as fooditems">
+	<ul class="items" >
+	  <li class='item' ng-repeat = "item in fooditems.catlog | PlaceandType:panel.getPlace():panel.getType()" >
+	  	 <img class="item-img" src={{item.imgsrc}}>
+		  <div style=" margin: 10px;">
+		 	<div class="item-div">
+		  		<h4 class="item-intro">{{item.intro}}</h4>
+		  		<span class="amount">Rs{{item.amount}}<span>
+		  	</div>
+		  	<div class="item-desc">
+		  		 {{item.desc}}
+		  	</div>	
+		  	<div class='likdislkcount'>
+		  		Like:{{item.like}}
+		  		Dislike:{{item.dislike}}
+		  	</div>
+		  	<div class='overlay'>
+		  		<div class='likdislk'>
+			  		<label ng-click="fooditems.like(item)">Like</label>
+			  		<label ng-click="fooditems.dislike(item)">Dislike</label>
+		  		</div>
+		  	</div>
+		  </div>  
+	  </li>
+	</ul>
+</div>

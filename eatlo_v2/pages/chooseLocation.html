@@ -1,0 +1,10 @@
+<!-- <p class="text"> HEYA !!! , You have clicked Choose Location</p>-->
+<div class="Location" ng-controller="TestLocationController as Locations">
+ <select ng-model="selectedLocation" ng-init="selectedLocation='BTM Layout'" class="selectLoaction" >
+        <option  id="location"    ng-repeat="location in Locations.location" value="{{location.name}}">{{location.name}}</option>
+ </select>
+ <button class="choseLocBtn" ng-click="panel.setTab(2) ; panel.setPlace(selectedLocation)"></button>
+ </div>
+ 
+
+ 
