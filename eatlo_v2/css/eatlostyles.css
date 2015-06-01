@@ -54,6 +54,7 @@ height="50px";
 }
 .navfooter a{
 
+  cursor: pointer;
   color: #fff;
  text-decoration: none;
 }
@@ -86,19 +87,22 @@ height="50px";
 }
 .selectLoaction{
    font-size: 20px;
-  height: 30px;
+  height: 40px;
   margin-left: 50px;
   width: 286px;
   font-family: "Comic Sans MS", cursive, sans-serif;
   color: #e97770;
 }
 .choseLocBtn{
-  color:#FFF;
-  padding: 30px 34px 17px 10px;
+    color: #FFF;
+  height: 40px;
+ vertical-align: middle;
+  width: 45px;
   background-color: #e97770;
   border: none;
-  background-image:url('../images/right_arrow.png'); 
-    background-size: 50px 43px;
+  margin-bottom: 9px;
+  background-image: url('../images/right_arrow.png');
+  background-size: 46px 40px;
 }
 .iteamCatlog{
   width: 909px;
@@ -190,10 +194,9 @@ height="50px";
  cursor: pointer;
  }
  .selectplace{
-    clear: both;
   float: right;
-  margin-right: 88px;
-  line-height: 30px;
+  margin-right: -312px;
+  line-height: 33px;
    background-color: #e97770 !important;
   
  }
